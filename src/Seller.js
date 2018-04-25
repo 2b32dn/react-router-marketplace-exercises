@@ -8,11 +8,16 @@ let sellers = [{
 {
   name: "Hank Green",
   rating: "2 stars"
+},
+{
+  name: "Jack Ma",
+  rating: "5 stars"
 }
 ]
 
 let formatSeller = (seller) => {
-  return (<div className="card center">
+  return (
+  <div className="card center">
     <div>
       <div>{seller.name}</div>
       <div>{seller.rating}</div>
