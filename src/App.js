@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Link } from 'react-router-dom'
+import { Route, BrowserRouter } from 'react-router-dom'
 import Seller from './Seller.js'
 import Item from './Item.js'
 import ItemsReviews from './ItemsReviews.js'
@@ -34,7 +34,7 @@ let items = [{
   price: 35000 + '$',
   stock: 50 + " remanining in stock",
   image: "subaru.jpg",
-  sellerId: 1,
+  sellerId: 2,
   itemId: 3
 },
 {
@@ -42,7 +42,7 @@ let items = [{
   price: 40000 + '$',
   stock: 46 + " remanining in stock",
   image: "blacklotus.jpg",
-  sellerId: 0,
+  sellerId: 2,
   itemId: 4
 }
 ]

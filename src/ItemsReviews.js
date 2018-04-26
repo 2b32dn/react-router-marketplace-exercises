@@ -1,30 +1,33 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import './App.css';
 
 let buyersReviews = [{
   name: "Gary",
-  reviews: ["This is awesome.","Dont buy this"]
+  reviews: "This is awesome."
 },
 {
   name: "Paul",
-  reviews: ["This is worth my money.","Sugoi!"]
+  reviews: "This is worth my money."
 },
 {
   name: "Ash",
-  reviews: ["This is lame.","Yatta!"]
+  reviews: "This is lame."
 },
 {
   name: "Misty",
-  reviews: ["This is better be good.","Dope. Would cope."]
+  reviews: "This is better be good."
 },
 {
   name: "Brock",
-  reviews: ["This is solid.","Take my money and shut up!"]
+  reviews: "Take my money and shut up!"
 }]
 
-let formatReviews = () => {
+let formatReviews = (buyer) => {
   return(
     <div>
-      
+      <div>{buyer.name}</div>
+      <div>{<li>{buyer.reviews}</li>}</div>
     </div>
   )
 }
@@ -32,7 +35,7 @@ let formatReviews = () => {
 class ItemsReviews extends Component{
   render(){
       return(
-        <div>{formatReviews(buyersReviews.[this.props.itemId])}</div>
+        <div>{formatReviews(buyersReviews[this.props.itemId])}</div>
       );
   }
 }
